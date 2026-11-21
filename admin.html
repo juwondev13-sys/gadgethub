@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>GadgetHub Admin</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="adminbody">
+<div id="login" class="login hidden">
+  <form id="loginForm" class="logincard">
+    <a class="logo" href="index.html">GADGET<span>HUB.</span></a>
+    <h1>Admin sign in</h1>
+    <p id="demoHint" class="hint hidden">Demo mode: use any email and the password <b>admin123</b>.</p>
+    <label>Email<input type="email" id="email" required autocomplete="username"></label>
+    <label>Password<input type="password" id="pw" required autocomplete="current-password"></label>
+    <p id="loginErr" class="err"></p>
+    <button class="primary" type="submit">SIGN IN</button>
+  </form>
+</div>
+
+<div id="dash" class="hidden">
+  <div class="top"><a class="logo" href="index.html">GADGET<span>HUB.</span> <em>Admin</em></a><button class="ghost" id="out">Sign out</button></div>
+  <main class="wrap">
+    <p id="demoBanner" class="banner hidden">Demo mode — orders live in this browser only. Connect Firebase (see README.md) to receive real orders from customers.</p>
+    <div class="stats" id="stats"></div>
+    <div class="toolbar"><div class="filters" id="tabs"></div><input class="search" id="q" placeholder="Search name, phone or order no."></div>
+    <div class="tablewrap"><table><thead><tr><th>Order</th><th>Customer</th><th>Items</th><th>Total</th><th>Placed</th><th>Status</th></tr></thead><tbody id="rows"></tbody></table></div>
+  </main>
+</div>
+
+<div class="overlay" id="ov"></div>
+<aside class="drawer" id="detail" aria-label="Order details"></aside>
+<div class="toast" id="toast"></div>
+<script type="module" src="js/admin.js"></script>
+</body>
+</html>

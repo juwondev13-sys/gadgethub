@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GadgetHub — The Next Generation of Tech</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="announcement">Complimentary delivery on orders over <b>₦250,000</b> · Lagos only</div>
+<header><nav class="nav">
+  <a class="logo" href="#">GADGET<span>HUB.</span></a>
+  <div class="navlinks" id="navlinks"><a href="#shop">Shop</a><a href="#categories">Categories</a><a href="#about">Why GadgetHub</a></div>
+  <div class="navright">
+    <input class="search" id="search" placeholder="Search gadgets..." aria-label="Search products">
+    <button class="iconbtn" id="cartOpen" aria-label="Open bag">🛍<span class="cartcount" id="cartCount">0</span></button>
+    <button class="iconbtn menu" id="menuBtn" aria-label="Menu">☰</button>
+  </div>
+</nav></header>
+
+<main>
+<section class="hero"><div class="hero-inner">
+  <div class="hero-copy">
+    <div class="eyebrow">Technology, thoughtfully chosen</div>
+    <h1>Upgrade the way you <span>live.</span></h1>
+    <p>Discover the latest smartphones, tablets and everyday tech essentials. Genuine products, great prices and a shopping experience made simple.</p>
+    <button class="primary" id="exploreBtn">EXPLORE COLLECTION&nbsp; ↗</button>
+  </div>
+  <div class="hero-visual"><img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=900&q=85" alt="Premium smartphone"></div>
+</div></section>
+
+<div class="trust"><span>✦ <b>100% genuine</b> products</span><span>↗ Secure checkout</span><span>◷ Fast Lagos delivery</span><span>♡ Customer support</span></div>
+
+<section class="section" id="categories">
+  <div class="sectionhead"><div><div class="eyebrow dark">Find your next favourite</div><h2>Shop by category</h2></div><p>Everything you need, all in one place.</p></div>
+  <div class="categories">
+    <a class="cat" href="#shop" data-jump="Phones"><div><strong>Smartphones</strong><small>Latest releases</small></div><span class="emoji">📱</span></a>
+    <a class="cat" href="#shop" data-jump="Tablets"><div><strong>Tablets</strong><small>Work & play</small></div><span class="emoji">📲</span></a>
+    <a class="cat" href="#shop" data-jump="Audio"><div><strong>Audio</strong><small>Hear everything</small></div><span class="emoji">🎧</span></a>
+    <a class="cat" href="#shop" data-jump="Accessories"><div><strong>Accessories</strong><small>Little essentials</small></div><span class="emoji">⌚</span></a>
+  </div>
+</section>
+
+<section class="section" id="shop">
+  <div class="sectionhead"><div><div class="eyebrow dark">Curated for you</div><h2>Popular right now</h2></div>
+    <div class="sortbox"><p id="resultCount">Our customer favourites</p>
+      <select id="sort" aria-label="Sort products"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select>
+    </div>
+  </div>
+  <div class="filters">
+    <button class="filter active" data-filter="All">All products</button><button class="filter" data-filter="Phones">Phones</button><button class="filter" data-filter="Tablets">Tablets</button><button class="filter" data-filter="Audio">Audio</button><button class="filter" data-filter="Accessories">Accessories</button><button class="filter" data-filter="Saved">♥ Saved</button>
+  </div>
+  <div class="products" id="products"></div>
+</section>
+
+<section class="promo" id="about"><div class="promo-inner">
+  <div class="promo-copy">
+    <div class="eyebrow dark">The GadgetHub promise</div>
+    <h2>Good tech.<br>Good decisions.</h2>
+    <p>We believe buying technology should feel exciting, not complicated. Get helpful recommendations, reliable products and support whenever you need it.</p>
+    <button class="primary" id="talkBtn">TALK TO OUR TEAM ↗</button>
+  </div>
+  <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=900&q=85" alt="Technology workspace">
+</div></section>
+</main>
+
+<footer>
+  <div class="footerinner">
+    <div><a class="logo" href="#" style="color:#fff">GADGET<span>HUB.</span></a><p>Your destination for thoughtfully chosen technology. Great gadgets, honest service and a better way to shop.</p></div>
+    <div class="footerlinks">
+      <div><b>Explore</b><a href="#shop">All products</a><a href="#categories">Categories</a><a href="#about">About us</a></div>
+      <div><b>Help</b><a href="#about">Contact</a><a href="#about">Delivery information</a><a href="#about">Returns</a></div>
+    </div>
+  </div>
+  <div class="copyright">© 2026 GadgetHub. Sample products and prices — replace with your own stock.</div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Shopping bag">
+  <div class="drawerhead"><h2>Your shopping bag</h2><button class="close" id="cartClose" aria-label="Close bag">×</button></div>
+  <div class="ship"><span id="shipText"></span><div class="bar"><i id="shipBar"></i></div></div>
+  <div class="cartitems" id="cartItems"></div>
+  <div class="cartfoot">
+    <div class="total"><span>Subtotal</span><span id="subtotal">₦0</span></div>
+    <p>Pay on delivery or by bank transfer. We call to confirm your order and delivery fee.</p>
+    <button class="primary" id="checkout">PLACE ORDER ↗</button>
+  </div>
+</aside>
+<div class="modal" id="modal" role="dialog" aria-modal="true"></div>
+<div class="toast" id="toast"></div>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
